@@ -1,0 +1,18 @@
+import java.util.*;
+public class MyClass {
+    public static int staircase(int n){
+        int rows=0;
+        int rowblocks=1;
+        while(n>=rowblocks){
+            n=n-rowblocks;
+            rows++;
+            rowblocks++;
+        }
+        return rows;
+    }
+    public static void main(String args[]){
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        System.out.println(staircase(n));
+    }
+}
